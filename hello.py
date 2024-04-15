@@ -5,6 +5,10 @@ app = Flask(__name__)
 def hello_world():
     return "Hello, World!"
 
+@app.route("/<name>")
+def freet(name):
+    return f"Hello there {name}!"
+
 if __name__ == "__main__":
     #execute only if run as a script
-    app.run()
+    app.run(debug=True)
